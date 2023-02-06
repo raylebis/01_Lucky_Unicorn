@@ -1,4 +1,6 @@
 # Count DOWN from one to 10
 
-for item in range(10, 0 - 1, -1):
+options = {"unicorn", "horse", "zebra", "donkey"}
+
+for item in options:
     print(item)
