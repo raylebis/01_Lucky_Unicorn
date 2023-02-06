@@ -1,6 +1,11 @@
 # Count DOWN from one to 10
 
-options = {"unicorn", "horse", "zebra", "donkey"}
+name = ""
+while name.lower() != "xxx":
+    name = input("Who are you? ")
+    print(name)
 
-for item in options:
-    print(item)
+# Outputs the result
+
+print()
+print("We are done!")
