@@ -21,6 +21,26 @@ def instructions():
     print("The rules of the game goes here")
     print()
     return""
+
+def num_check(question, low, high):
+
+    error = "Please enter a whole number between 1 and 10"
+
+    valid = False
+    while not valid:
+        try:
+            # ask the question
+            response = int(input(question))
+            # If the amount is too low / too high to give
+            if low < response <= high:
+                return response
+
+            else:
+                print(error)
+
+        except ValueError:
+            print(error)
+
 # Main routine
 played_before = yes_no("Have you played the "
                            "game before? ")

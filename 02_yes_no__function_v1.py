@@ -11,6 +11,7 @@ def yes_no(question):
         elif response == "no" or response == "n":
             response = "no"
             return response
+
         else:
             print("Please enter either 'Yes' or 'No'")
 
