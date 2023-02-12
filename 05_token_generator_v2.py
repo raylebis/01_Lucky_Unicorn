@@ -19,4 +19,4 @@ for item in range(0, 20):
         balance -= 0.50
 
 # output
-print("Toke: {} , Balance: ${}".format(chosen, balance))
+print("Token: {} , Balance: ${}".format(chosen, balance))
