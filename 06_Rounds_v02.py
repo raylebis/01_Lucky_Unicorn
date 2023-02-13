@@ -33,6 +33,8 @@ while play_again == "":
             chosen = "zebra"
         balance -= 0.5
 
+    print("You got a {}. Your balance is ${:.2f}".format(chosen, balance))
+
     if balance < 1:
         play_again = "xxx"
         print("Sorry you have run out of money")
