@@ -151,15 +151,18 @@ while play_again == "":
         balance -= 0.5
 
     outcome = "You got a {}. Your balance is ${:.2f}".format(chosen, balance)
-
+    print()
     statement_generator(outcome, prize_decoration)
 
     if balance < 1:
         play_again = "xxx"
-        print("Sorry you have run out of money")
+        statement_generator("Sorry you have run out of money", "#")
     else:
         play_again = input("Press Enter to play again "
                            "or 'xxx' to quit")
 
 print()
+statement_generator("Results", "=")
 print("Final balance", balance)
+print("Thank you for playing!")
+
