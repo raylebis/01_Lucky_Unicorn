@@ -105,7 +105,7 @@ if played_before == "no":
     instructions()
 
 if played_before == "yes":
-    statement_generator("Lets get started", "+")
+    statement_generator("Lets get started...", "-")
 
 print()
 
