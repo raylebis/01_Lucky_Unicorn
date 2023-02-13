@@ -125,7 +125,7 @@ while play_again == "":
 
     # prints the round number
     print()
-    print("*** Round #{} ***".format(rounds_played))
+    statement_generator("Round #{}".format(rounds_played), ".")
     chosen_num = random.randint(1, 100)
 
     # Adjust balance
