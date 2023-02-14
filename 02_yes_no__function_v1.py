@@ -16,7 +16,11 @@ def yes_no(question):
             print("Please enter either 'Yes' or 'No'")
 
 # Main routine
+
+
 show_instructions = yes_no("Have you played the game before? ")
+
+
 print("you chose {}".format(show_instructions))
 print()
 having_fun = yes_no("Are you having fun? ")

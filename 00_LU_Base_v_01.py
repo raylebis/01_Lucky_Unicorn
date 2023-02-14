@@ -15,22 +15,17 @@ def yes_no(question):
 
         else:
             print("Please enter either 'Yes' or 'No'")
+            print()
 
-
-def instructions():
-    print("*** How to Play ***")
-    print()
-    print("The rules of the game goes here")
-    print()
-    return""
 
 
 def num_check(question, low, high):
 
-    error = "Please enter a whole number between 1 and 10"
-
     valid = False
     while not valid:
+        error = "Please enter a whole number between 1 and 10"
+        print()
+
         try:
             # ask the question
             response = int(input(question))
@@ -43,21 +38,6 @@ def num_check(question, low, high):
 
         except ValueError:
             print(error)
-
-
-def statement_generator(statement, decoration):
-
-    sides = decoration * 3
-
-    statement = "{} {} {}".format(sides, statement, sides)
-    top_bottom = decoration * len(statement)
-
-    print(top_bottom)
-    print(statement)
-    print(top_bottom)
-
-    return ""
-
 
 def instructions():
 
@@ -74,6 +54,7 @@ def instructions():
     print("Donkey: $1.00 (balance decreases by $1.00 ")
     print()
     print("Do you think you have what it takes to win this game? and take advantage?")
+    print()
 
     return ""
 
@@ -84,6 +65,7 @@ def statement_generator(outcome, prize_decoration):
     sides = prize_decoration * 3
 
     outcome = "{} {} {}".format(sides, outcome, sides)
+
     top_bottom = prize_decoration * len(outcome)
 
     print(top_bottom)
@@ -95,11 +77,13 @@ def statement_generator(outcome, prize_decoration):
 
 
 # Main routine
+
+
 statement_generator("Welcome to the Lucky Unicorn Game", "*")
 
-played_before = yes_no("Have you played the "
-                           "game before? ")
 
+played_before = yes_no("Have you played the game before? ")
+print()
 
 if played_before == "no":
     instructions()
@@ -107,16 +91,15 @@ if played_before == "no":
 if played_before == "yes":
     statement_generator("Lets get started...", "-")
 
-print()
-
 how_much = num_check("How much would you like to play with? ", 0, 10)
+print()
 print("You have asked to play with ${}".format(how_much))
 
 # set balance for testing purposes
 balance = how_much
 
 rounds_played = 0
-
+print()
 play_again = input("press <Enter> to play...").lower()
 while play_again == "":
 
@@ -156,6 +139,7 @@ while play_again == "":
 
     if balance < 1:
         play_again = "xxx"
+        print()
         statement_generator("Sorry you have run out of money", "#")
     else:
         play_again = input("Press Enter to play again "
@@ -163,6 +147,7 @@ while play_again == "":
 
 print()
 statement_generator("Results", "=")
-print("Final balance", balance)
+print()
+print("Final balance", "${}".format(balance))
 print("Thank you for playing!")
 
